@@ -30,6 +30,10 @@
 <meta name="twitter:image" content="https://luxuryandblush.com/luxury-and-blush/images/galleries/lm/LM-001.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Image host: connect early + preload hero (LCP) so it starts downloading immediately -->
+<link rel="preconnect" href="https://luxuryandblush.com" crossorigin>
+<link rel="dns-prefetch" href="https://luxuryandblush.com">
+<link rel="preload" as="image" href="https://luxuryandblush.com/luxury-and-blush/images/galleries/lm/LM-001.webp" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- ============ STRUCTURED DATA (SEO + GEO) ============ -->
@@ -386,14 +390,35 @@ footer{padding:40px 24px}
 .filter-bar{gap:6px}
 .filter-btn{padding:10px 16px;font-size:9px}
 }
+/* ===== PAGE LOAD VEIL (smooth entrance) ===== */
+#pageLoad{position:fixed;inset:0;z-index:10000;background:var(--cream);display:flex;align-items:center;justify-content:center;transition:opacity 0.9s ease 0.05s,visibility 0.9s 0.05s}
+#pageLoad.pl-done{opacity:0;visibility:hidden}
+.pl-inner{display:flex;flex-direction:column;align-items:center;gap:24px}
+.pl-logo{width:58px;height:auto;opacity:0.9;animation:plPulse 1.9s ease-in-out infinite}
+.pl-line{width:1px;height:0;background:var(--gold);animation:plLine 1.5s cubic-bezier(0.16,1,0.3,1) 0.2s forwards}
+@keyframes plPulse{0%,100%{opacity:0.45}50%{opacity:0.92}}
+@keyframes plLine{to{height:52px}}
+/* ===== IMAGE FADE-IN ON LOAD (no harsh pop) ===== */
+.fade-img{opacity:0;transition:opacity 0.85s ease}
+.fade-img.is-loaded{opacity:1}
 @media(prefers-reduced-motion:reduce){
 .rv,.hero-tag,.hero-sub{opacity:1!important;transform:none!important}
 .hero h1 .word>span{transform:none!important}
+.fade-img{opacity:1!important}
+.pl-logo{opacity:0.9!important}.pl-line{height:52px!important}
 *{animation:none!important;transition-duration:0.01ms!important}
 }
 </style>
 </head>
 <body>
+
+<!-- PAGE LOAD VEIL -->
+<div id="pageLoad" aria-hidden="true">
+  <div class="pl-inner">
+    <img class="pl-logo" src="https://luxuryandblush.com/luxury-and-blush/images/logos/logo-lb.png" alt="">
+    <span class="pl-line"></span>
+  </div>
+</div>
 
 <nav id="navbar">
 <a href="https://luxuryandblush.com/luxury-and-blush/index.html" class="nav-logo"><img src="https://luxuryandblush.com/luxury-and-blush/images/logos/logo-lb.png" alt="Luxury and Blush Events logo">Luxury and Blush Events</a>
@@ -742,6 +767,33 @@ document.querySelectorAll('.faq-item').forEach(function(item){
     }
   });
 });
+
+/* ===== SMOOTH IMAGE FADE-IN (gallery/intro pop-free) ===== */
+(function(){
+  var imgs=document.querySelectorAll('.m-item img, .intro-img img, .gallery-card img');
+  imgs.forEach(function(im){
+    im.classList.add('fade-img');
+    if(im.complete && im.naturalWidth>0){ im.classList.add('is-loaded'); return; }
+    im.addEventListener('load',function(){im.classList.add('is-loaded')});
+    im.addEventListener('error',function(){im.classList.add('is-loaded')}); /* never leave hidden */
+  });
+})();
+
+/* ===== PAGE LOAD VEIL: fade out once hero image is ready ===== */
+(function(){
+  var pl=document.getElementById('pageLoad');if(!pl)return;
+  var done=false;
+  function hide(){if(done)return;done=true;pl.classList.add('pl-done');setTimeout(function(){if(pl&&pl.parentNode)pl.parentNode.removeChild(pl)},1000);}
+  var hero=document.querySelector('#heroImg img');
+  var minShow=new Promise(function(r){setTimeout(r,850);});            /* feel intentional, not a flash */
+  var heroReady=new Promise(function(r){
+    if(!hero||(hero.complete&&hero.naturalWidth>0))return r();
+    hero.addEventListener('load',r);hero.addEventListener('error',r);
+  });
+  Promise.all([minShow,heroReady]).then(hide);
+  window.addEventListener('load',hide);   /* safety net */
+  setTimeout(hide,5000);                  /* hard fallback: never get stuck */
+})();
 </script>
 </body>
 </html>
