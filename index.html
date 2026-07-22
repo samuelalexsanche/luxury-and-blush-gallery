@@ -390,6 +390,26 @@ footer{padding:40px 24px}
 .filter-bar{gap:6px}
 .filter-btn{padding:10px 16px;font-size:9px}
 }
+/* ===== PARALLAX PHOTO BANDS (depth, not flat) ===== */
+.parallax-band{position:relative;overflow:hidden}
+.band-bg{position:absolute;inset:-32% 0;z-index:0;will-change:transform}
+.band-bg img{width:100%;height:100%;object-fit:cover;object-position:center 38%}
+.band-overlay{position:absolute;inset:0;z-index:1}
+#quote-band.parallax-band{background:var(--dark)}
+#quote-band .band-overlay{background:linear-gradient(0deg,rgba(18,17,16,0.82),rgba(18,17,16,0.66))}
+#quote-band blockquote{position:relative;z-index:2}
+#cta.parallax-band{background:var(--dark)}
+#cta .band-overlay{background:linear-gradient(0deg,rgba(14,13,12,0.9) 0%,rgba(14,13,12,0.78) 55%,rgba(14,13,12,0.86) 100%)}
+#cta.parallax-band>*:not(.band-bg):not(.band-overlay){position:relative;z-index:2}
+#cta.parallax-band .section-tag{color:var(--gold-light)}
+#cta.parallax-band .section-title{color:var(--cream)}
+#cta.parallax-band .section-text{color:rgba(255,255,255,0.82)}
+/* ===== 3D TILT CARDS (depth on hover) ===== */
+.gallery-card{transition:transform 0.5s cubic-bezier(0.16,1,0.3,1),box-shadow 0.45s ease;will-change:transform}
+.gallery-card.tilting{transition:box-shadow 0.45s ease}
+.gallery-card:hover{box-shadow:0 34px 64px -28px rgba(24,17,10,0.6)}
+.gallery-card .card-shine{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transition:opacity 0.35s ease;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,0.22),rgba(255,255,255,0) 42%)}
+.gallery-card.tilting .card-shine{opacity:1}
 /* ===== PAGE LOAD VEIL (smooth entrance) ===== */
 #pageLoad{position:fixed;inset:0;z-index:10000;background:var(--cream);display:flex;align-items:center;justify-content:center;transition:opacity 0.9s ease 0.05s,visibility 0.9s 0.05s}
 #pageLoad.pl-done{opacity:0;visibility:hidden}
@@ -558,7 +578,9 @@ footer{padding:40px 24px}
 </section>
 
 <!-- QUOTE BAND -->
-<section id="quote-band">
+<section id="quote-band" class="parallax-band">
+  <div class="band-bg" data-parallax="0.12"><img src="https://luxuryandblush.com/luxury-and-blush/images/scenery2.png" alt="" loading="lazy" aria-hidden="true"></div>
+  <div class="band-overlay"></div>
   <blockquote class="rv">
     <span data-en>"Every detail is a frame. Every moment, a scene. And you are always <em>the lead</em>."</span>
     <span data-es>"Cada detalle es un encuadre. Cada momento, una escena. Y tú siempre eres <em>el protagonista</em>."</span>
@@ -616,11 +638,13 @@ footer{padding:40px 24px}
 </section>
 
 <!-- CTA -->
-<section id="cta">
+<section id="cta" class="parallax-band">
+  <div class="band-bg" data-parallax="0.12"><img src="https://luxuryandblush.com/luxury-and-blush/images/scenery1.png" alt="" loading="lazy" aria-hidden="true"></div>
+  <div class="band-overlay"></div>
   <div class="section-tag rv"><span data-en>Your Story</span><span data-es>Tu Historia</span></div>
   <h2 class="section-title rv"><span data-en>Ready to direct<br><em>your own premiere?</em></span><span data-es>¿Lista para dirigir<br><em>tu propio estreno?</em></span></h2>
   <p class="section-text rv"><span data-en>A limited number of Premiere weddings each year. Apply and let us begin crafting your story.</span><span data-es>Un número limitado de bodas Premiere al año. Aplica y déjanos comenzar a crear tu historia.</span></p>
-  <a href="https://luxuryandblush.com/luxury-and-blush/index.html#casting" class="btn btn-dark rv"><span data-en>Submit your Casting</span><span data-es>Envía tu Casting</span></a>
+  <a href="https://luxuryandblush.com/luxury-and-blush/index.html#casting" class="btn btn-gold rv"><span data-en>Submit your Casting</span><span data-es>Envía tu Casting</span></a>
 </section>
 </main>
 
@@ -776,6 +800,51 @@ document.querySelectorAll('.faq-item').forEach(function(item){
     if(im.complete && im.naturalWidth>0){ im.classList.add('is-loaded'); return; }
     im.addEventListener('load',function(){im.classList.add('is-loaded')});
     im.addEventListener('error',function(){im.classList.add('is-loaded')}); /* never leave hidden */
+  });
+})();
+
+/* ===== PARALLAX PHOTO BANDS ===== */
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var els=[].slice.call(document.querySelectorAll('[data-parallax]'));
+  if(!els.length)return;
+  var ticking=false;
+  function update(){
+    var vh=window.innerHeight;
+    els.forEach(function(el){
+      var band=el.parentElement,r=band.getBoundingClientRect();
+      if(r.bottom<-120||r.top>vh+120){ticking=false;return;}
+      var speed=parseFloat(el.dataset.parallax)||0.12;
+      var delta=(vh/2-(r.top+r.height/2))*speed;
+      var maxShift=r.height*0.30;              /* stay within the -32% bg overhang */
+      if(delta>maxShift)delta=maxShift;else if(delta<-maxShift)delta=-maxShift;
+      el.style.transform='translate3d(0,'+delta.toFixed(1)+'px,0)';
+    });
+    ticking=false;
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update);}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll,{passive:true});
+  update();
+})();
+
+/* ===== 3D TILT ON GALLERY CARDS ===== */
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(window.matchMedia('(hover: none)').matches)return;   /* skip touch devices */
+  var MAX=7; /* max tilt degrees */
+  document.querySelectorAll('.gallery-card').forEach(function(card){
+    var shine=document.createElement('div');shine.className='card-shine';card.appendChild(shine);
+    card.addEventListener('pointerenter',function(){card.classList.add('tilting')});
+    card.addEventListener('pointermove',function(e){
+      var r=card.getBoundingClientRect();
+      var px=(e.clientX-r.left)/r.width, py=(e.clientY-r.top)/r.height;
+      var rx=(0.5-py)*MAX*2, ry=(px-0.5)*MAX*2;
+      card.style.transform='perspective(1400px) rotateX('+rx.toFixed(2)+'deg) rotateY('+ry.toFixed(2)+'deg)';
+      shine.style.setProperty('--mx',(px*100).toFixed(1)+'%');
+      shine.style.setProperty('--my',(py*100).toFixed(1)+'%');
+    });
+    card.addEventListener('pointerleave',function(){card.classList.remove('tilting');card.style.transform='';});
   });
 })();
 
