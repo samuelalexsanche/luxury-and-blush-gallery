@@ -287,8 +287,9 @@ section{padding:130px 80px}
 .filter-btn.active{background:var(--dark);border-color:var(--dark);color:var(--cream)}
 
 /* MASONRY GALLERY */
-.masonry{columns:3;column-gap:14px;max-width:1200px;margin:0 auto;text-align:left}
-.m-item{position:relative;overflow:hidden;margin-bottom:14px;break-inside:avoid;cursor:pointer;background:var(--dark);display:block}
+.masonry{display:flex;gap:14px;max-width:1200px;margin:0 auto;text-align:left;align-items:flex-start}
+.masonry-col{flex:1;min-width:0;display:flex;flex-direction:column;gap:14px}
+.m-item{position:relative;overflow:hidden;cursor:pointer;background:var(--dark);display:block}
 .m-item img{width:100%;height:auto;transition:transform 0.7s cubic-bezier(0.16,1,0.3,1)}
 .m-item:hover img{transform:scale(1.05)}
 .m-item::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(26,26,26,0.55) 0%,transparent 45%);opacity:0;transition:opacity 0.4s;pointer-events:none}
@@ -372,15 +373,16 @@ nav.scrolled{padding:14px 24px}
 section{padding:90px 24px;width:100%;box-sizing:border-box}
 #intro{grid-template-columns:1fr;gap:50px}
 .intro-stats{grid-template-columns:repeat(2,1fr);gap:20px 0}
-.masonry{columns:2}
+.masonry{gap:10px}
+.masonry-col{gap:10px}
 .stories-header{grid-template-columns:1fr}
 .hero-content{padding:0 24px 60px}
 #quote-band{padding:80px 24px}
 footer{padding:40px 24px}
 }
 @media(max-width:600px){
-.masonry{columns:2;column-gap:8px}
-.m-item{margin-bottom:8px}
+.masonry{gap:8px}
+.masonry-col{gap:8px}
 .galleries-grid{grid-template-columns:1fr 1fr;gap:10px}
 .gallery-card-info{padding:16px 12px}
 .gallery-card-name{font-size:18px}
@@ -556,6 +558,17 @@ footer{padding:40px 24px}
     <figure class="m-item rv" data-cat="floral"><img src="images/g/villa-amodei-floral.webp" alt="Lemon and citrus wedding tablescape at an editorial villa by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Feast</span><span data-es>El Banquete</span></div><div class="m-caption-meta"><span data-en>Villa Amodei</span><span data-es>Villa Amodei</span></div></figcaption></figure>
     <figure class="m-item rv" data-cat="destinations"><img src="https://luxuryandblush.com/luxury-and-blush/images/destinations/versalles.jpg" alt="Wedding at Versailles, France, directed by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">Versalles</div><div class="m-caption-meta">France</div></figcaption></figure>
     <figure class="m-item rv" data-cat="weddings"><img src="images/g/playa-1.webp" alt="Beach wedding at sunset in Mexico by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Coast</span><span data-es>La Costa</span></div><div class="m-caption-meta">México</div></figcaption></figure>
+    <figure class="m-item rv" data-cat="weddings"><img src="images/g/diana-edgar-3.webp" alt="Diana and Edgar wedding with red bouquet in Mexico 2024 by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">D & <em>E</em></div><div class="m-caption-meta">México · 2024</div></figcaption></figure>
+    <figure class="m-item rv" data-cat="weddings"><img src="images/g/boho-2.webp" alt="Boho beach wedding couple with pampas grass by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>Boho</span><span data-es>Boho</span></div><div class="m-caption-meta">Riviera Maya</div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/bere-isaac-2.webp" alt="Blush floral decoration detail at a wedding by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Bouquet</span><span data-es>El Ramo</span></div><div class="m-caption-meta">Bere & Isaac</div></figcaption></figure>
+    <figure class="m-item rv" data-cat="weddings"><img src="images/g/villa-amodei-2.webp" alt="Editorial villa wedding portrait by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">Villa <em>Amodei</em></div><div class="m-caption-meta"><span data-en>Editorial</span><span data-es>Editorial</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="weddings"><img src="images/g/ms-1.webp" alt="M and S wedding portrait in Guadalajara by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">M & <em>S</em></div><div class="m-caption-meta">Guadalajara · 2024</div></figcaption></figure>
+    <figure class="m-item rv" data-cat="weddings"><img src="images/g/tequila-1.webp" alt="Wedding in the blue agave fields of Tequila, Jalisco, by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Agave</span><span data-es>El Agave</span></div><div class="m-caption-meta">Tequila</div></figcaption></figure>
+    <figure class="m-item rv" data-cat="weddings"><img src="images/g/fernanda-oscar-3.webp" alt="Fernanda and Oscar hacienda reception in Mexico 2018 by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">F & <em>O</em></div><div class="m-caption-meta">México · 2018</div></figcaption></figure>
+    <figure class="m-item rv" data-cat="weddings"><img src="images/g/paris-1.webp" alt="Wedding in the gardens of Versailles, France, by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">Versalles</div><div class="m-caption-meta"><span data-en>France</span><span data-es>Francia</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="weddings"><img src="images/g/bosque-2.webp" alt="Forest wedding party among the pines by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Forest</span><span data-es>El Bosque</span></div><div class="m-caption-meta">Jalisco</div></figcaption></figure>
+    <figure class="m-item rv" data-cat="weddings"><img src="images/g/se-3.webp" alt="S and E lakeside wedding portrait in Chapala 2023 by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">S & <em>E</em></div><div class="m-caption-meta">Chapala · 2023</div></figcaption></figure>
+    <figure class="m-item rv" data-cat="weddings"><img src="images/g/civil-1.webp" alt="Editorial civil wedding in Guadalajara by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Civil</span><span data-es>Lo Civil</span></div><div class="m-caption-meta">Guadalajara</div></figcaption></figure>
   </div>
 </section>
 
@@ -747,23 +760,42 @@ mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',function(){mt.cla
   });
 })();
 
-/* ===== FILTERS ===== */
+/* ===== MASONRY + FILTERS (distributed flex columns, natural reading order) ===== */
 (function(){
-  var btns=document.querySelectorAll('.filter-btn'),items=document.querySelectorAll('.m-item');
-  btns.forEach(function(b){
+  var grid=document.getElementById('masonry');
+  var all=Array.prototype.slice.call(grid.querySelectorAll('.m-item'));
+  all.forEach(function(it,i){it.dataset.ord=i;});
+  var curFilter='all';
+  function ncols(){return window.innerWidth<=980?2:3;}
+  function layout(){
+    var n=ncols();
+    var vis=all.filter(function(it){return curFilter==='all'||it.dataset.cat===curFilter;});
+    var cols=[];for(var i=0;i<n;i++){var c=document.createElement('div');c.className='masonry-col';cols.push(c);}
+    vis.forEach(function(it,i){cols[i%n].appendChild(it);});   /* round-robin => rows read left-to-right */
+    grid.textContent='';
+    cols.forEach(function(c){grid.appendChild(c);});
+  }
+  /* ordered list for the lightbox (original sequence, not column order) */
+  window.__galleryVisibleImgs=function(){
+    return all.filter(function(it){return (curFilter==='all'||it.dataset.cat===curFilter)&&it.querySelector('img');})
+              .map(function(it){return it.querySelector('img');});
+  };
+  document.querySelectorAll('.filter-btn').forEach(function(b){
     b.addEventListener('click',function(){
-      btns.forEach(x=>x.classList.remove('active'));b.classList.add('active');
-      var f=b.dataset.filter;
-      items.forEach(function(it){it.classList.toggle('hidden-cat',f!=='all'&&it.dataset.cat!==f)});
-      anime({targets:'.m-item:not(.hidden-cat)',opacity:[0,1],translateY:[16,0],duration:600,delay:anime.stagger(40),easing:'cubicBezier(0.16,1,0.3,1)'});
+      document.querySelectorAll('.filter-btn').forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      curFilter=b.dataset.filter;layout();
+      anime({targets:'#masonry .m-item',opacity:[0,1],translateY:[16,0],duration:600,delay:anime.stagger(30),easing:'cubicBezier(0.16,1,0.3,1)'});
     });
   });
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){if(grid.children.length!==ncols())layout();},160);});
+  layout();
 })();
 
 /* ===== LIGHTBOX ===== */
 (function(){
   var lb=document.getElementById('lightbox'),img=document.getElementById('lbImg'),idx=0,list=[];
-  function visible(){return Array.from(document.querySelectorAll('.m-item:not(.hidden-cat) img'))}
+  function visible(){return window.__galleryVisibleImgs?window.__galleryVisibleImgs():Array.from(document.querySelectorAll('#masonry .m-item img'))}
   function open(i){list=visible();idx=i;img.src=list[idx].src;img.alt=list[idx].alt;lb.classList.add('open');document.body.style.overflow='hidden';
     anime({targets:img,opacity:[0,1],scale:[0.97,1],duration:400,easing:'easeOutQuad'})}
   function close(){lb.classList.remove('open');document.body.style.overflow=''}
