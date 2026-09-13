@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wedding Gallery | Luxury and Blush Events — Luxury Wedding Planner in Mexico</title>
-<meta name="description" content="Galería de bodas reales de Luxury and Blush Events, wedding planner de lujo en México dirigida por Thelma: 20 años de experiencia, 404 bodas en Tulum, Cancún, Puerto Vallarta, Guadalajara y más de 16 destinos.">
+<title>Aurea 1618 — Floral &amp; Decor Scenography | Luxury and Blush Events</title>
+<meta name="description" content="Aurea 1618, la línea de floral &amp; decor de Luxury and Blush Events: escenografía botánica para bodas de destino en México. Instalaciones inmersivas, altares arquitectónicos y tablescaping de alta costura.">
 <link rel="canonical" href="https://luxuryandblushgallery.com/">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="author" content="Luxury and Blush Events">
@@ -16,8 +16,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Luxury and Blush Events">
-<meta property="og:title" content="Wedding Gallery | Luxury and Blush Events — Luxury Wedding Planner in Mexico">
-<meta property="og:description" content="Real luxury weddings directed by Luxury and Blush Events: 20 years of experience, 404 weddings across Tulum, Cancún, Puerto Vallarta, Guadalajara and 16 destinations.">
+<meta property="og:title" content="Aurea 1618 — Architectural Botanicals | Luxury and Blush Events">
+<meta property="og:description" content="La flor concebida no como adorno, sino como la escenografía viva que guía tu historia. Floral &amp; decor de destino por Luxury and Blush Events.">
 <meta property="og:url" content="https://luxuryandblushgallery.com/">
 <meta property="og:image" content="https://luxuryandblush.com/luxury-and-blush/images/galleries/lm/LM-001.webp">
 <meta property="og:image:alt" content="Luxury destination wedding in Mexico by Luxury and Blush Events">
@@ -33,7 +33,7 @@
 <!-- Image host: connect early + preload hero (LCP) so it starts downloading immediately -->
 <link rel="preconnect" href="https://luxuryandblush.com" crossorigin>
 <link rel="dns-prefetch" href="https://luxuryandblush.com">
-<link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero-floral.webp" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- ============ STRUCTURED DATA (SEO + GEO) ============ -->
@@ -241,14 +241,14 @@ nav.scrolled .menu-toggle span{background:var(--dark)}
 .hero{height:92vh;position:relative;overflow:hidden;background:var(--dark)}
 .hero-img{position:absolute;inset:-8% 0;will-change:transform}
 .hero-img img{object-position:center 35%}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(26,26,26,0.72) 0%,rgba(26,26,26,0.25) 50%,rgba(26,26,26,0.2) 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,15,14,0.85) 0%,rgba(16,15,14,0.55) 42%,rgba(16,15,14,0.12) 100%),linear-gradient(0deg,rgba(16,15,14,0.8) 0%,rgba(16,15,14,0.3) 58%,rgba(16,15,14,0.28) 100%)}
 .hero-content{position:absolute;bottom:0;left:0;right:0;padding:0 60px 90px;z-index:2}
 .hero-tag{font-family:var(--sans);font-size:11px;letter-spacing:6px;text-transform:uppercase;color:var(--white);margin-bottom:24px;font-weight:500;opacity:0}
 .hero h1{font-family:var(--serif);font-size:clamp(50px,7.5vw,90px);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:20px}
 .hero h1 em{font-style:italic;font-weight:300;color:#e2c97a}
 .hero h1 .word{display:inline-block;overflow:hidden;vertical-align:bottom}
 .hero h1 .word>span{display:inline-block;transform:translateY(110%)}
-.hero-sub{font-family:var(--sans);font-size:11px;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,0.7);font-weight:400;opacity:0}
+.hero-sub{font-family:var(--sans);font-size:11px;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,0.88);font-weight:400;opacity:0}
 .hero-line{width:0;height:1px;background:var(--gold);margin-top:36px}
 .hero-scroll{position:absolute;bottom:0;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;z-index:2}
 .hero-scroll-line{width:1px;height:60px;background:var(--gold);opacity:0.7;transform-origin:top}
@@ -426,11 +426,52 @@ footer{padding:40px 24px}
 .fade-img{opacity:0;transition:opacity 0.85s ease}
 .fade-img.is-loaded{opacity:1}
 @media(prefers-reduced-motion:reduce){
-.rv,.hero-tag,.hero-sub{opacity:1!important;transform:none!important}
+.rv,.hero-tag,.hero-brand,.hero-sub{opacity:1!important;transform:none!important}
 .hero h1 .word>span{transform:none!important}
 .fade-img{opacity:1!important}
 .pl-logo{opacity:0.9!important}.pl-line{height:52px!important}
 *{animation:none!important;transition-duration:0.01ms!important}
+}
+
+/* ===== AUREA 1618 — floral-first ===== */
+.hero-brand{font-family:var(--serif);font-size:14px;letter-spacing:9px;text-transform:uppercase;color:var(--gold-light);margin-bottom:20px;opacity:0}
+.hero-brand small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:4px;color:rgba(255,255,255,0.5);margin-top:9px;font-weight:400}
+.hero-cta{margin-top:34px;display:inline-block}
+/* PILARES */
+#pilares{background:var(--cream);padding:120px 80px 60px}
+.pilares-head{text-align:center;max-width:720px;margin:0 auto 80px}
+.pilar{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-bottom:110px;max-width:1180px;margin-left:auto;margin-right:auto}
+.pilar-img{aspect-ratio:4/5;overflow:hidden;background:var(--dark)}
+.pilar-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.9s cubic-bezier(0.16,1,0.3,1)}
+.pilar:hover .pilar-img img{transform:scale(1.04)}
+.pilar.rev .pilar-img{order:2}
+.pilar-n{font-family:var(--serif);font-size:14px;letter-spacing:4px;color:var(--gold);margin-bottom:16px}
+.pilar h3{font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.5vw,44px);line-height:1.1;color:var(--dark);margin-bottom:12px}
+.pilar h3 em{font-style:italic;color:var(--gold)}
+.pilar-concept{font-family:var(--sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8b7355;font-weight:600;margin-bottom:22px}
+.pilar p{font-family:var(--sans);font-size:15px;line-height:1.95;color:var(--muted);font-weight:300;margin-bottom:26px}
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge{font-family:var(--sans);font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:9px 15px;border:1px solid var(--blush);color:var(--muted);font-weight:500}
+/* ARCHIVO numerado */
+.archive-list{max-width:1040px;margin:0 auto;border-top:1px solid var(--blush)}
+.arch-row{display:grid;grid-template-columns:54px 92px 1fr auto auto;gap:24px;align-items:center;padding:18px 6px;border-bottom:1px solid var(--blush);text-decoration:none;transition:background 0.4s}
+.arch-row:hover{background:var(--warm)}
+.arch-num{font-family:var(--serif);font-size:15px;color:var(--gold)}
+.arch-thumb{width:92px;height:66px;overflow:hidden;background:var(--dark)}
+.arch-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s cubic-bezier(0.16,1,0.3,1)}
+.arch-row:hover .arch-thumb img{transform:scale(1.08)}
+.arch-title{font-family:var(--serif);font-size:clamp(19px,2.1vw,26px);font-weight:300;color:var(--dark);line-height:1.2}
+.arch-title em{font-style:italic;color:var(--gold)}
+.arch-loc{font-family:var(--sans);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.arch-count{font-family:var(--sans);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8b7355;white-space:nowrap}
+.arch-view{font-family:var(--sans);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+@media(max-width:980px){
+#pilares{padding:80px 24px 40px}
+.pilar{grid-template-columns:1fr;gap:30px;margin-bottom:70px}
+.pilar.rev .pilar-img{order:0}
+.arch-row{grid-template-columns:34px 64px 1fr;gap:14px;padding:14px 4px}
+.arch-thumb{width:64px;height:48px}
+.arch-count,.arch-view{display:none}
 }
 </style>
 </head>
@@ -482,109 +523,260 @@ footer{padding:40px 24px}
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-img" id="heroImg"><img src="images/hero.webp" alt="Luxury destination wedding on the coast of Mexico by Luxury and Blush Events" fetchpriority="high"></div>
+  <div class="hero-img" id="heroImg"><img src="images/hero-floral.webp" alt="Monumental suspended floral installation designed by Aurea 1618 for a destination wedding in Mexico" fetchpriority="high"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-tag" id="heroTag"><span data-en>The Gallery · Luxury and Blush Events</span><span data-es>La Galería · Luxury and Blush Events</span></div>
+    <div class="hero-brand" id="heroTag">Aurea 1618<small><span data-en>Florals &amp; Decor · by Luxury and Blush Events</span><span data-es>Floral &amp; Decor · por Luxury and Blush Events</span></small></div>
     <h1 id="heroTitle">
-      <span data-en>Every frame, an <em>iconic</em> story</span>
-      <span data-es>Cada encuadre, una historia <em>icónica</em></span>
+      <span data-en>Architectural <em>Botanicals</em> for Iconoclastic Romantics</span>
+      <span data-es>Botánica <em>arquitectónica</em> para románticos iconoclastas</span>
     </h1>
-    <p class="hero-sub" id="heroSub"><span data-en>Real Weddings · Floral Art · Mexico's Most Stunning Destinations</span><span data-es>Bodas Reales · Arte Floral · Los Destinos Más Impresionantes de México</span></p>
+    <p class="hero-sub" id="heroSub"><span data-en>Immersive atmospheres in destination locations. The flower conceived not as ornament, but as living scenography.</span><span data-es>Atmósferas inmersivas en locaciones de destino. La flor concebida no como adorno, sino como escenografía viva.</span></p>
     <div class="hero-line" id="heroLine"></div>
+    <a href="https://luxuryandblush.com/luxury-and-blush/index.html#casting" class="btn btn-gold hero-cta"><span data-en>Commission your scenography</span><span data-es>Comisiona tu escenografía</span></a>
   </div>
   <div class="hero-scroll"><div class="hero-scroll-line" id="heroScrollLine"></div></div>
 </header>
 
 <main>
-<!-- INTRO — GEO answer block -->
+<!-- MANIFIESTO -->
 <section id="intro">
   <div>
-    <div class="section-tag rv"><span data-en>The Studio</span><span data-es>El Estudio</span></div>
+    <div class="section-tag rv"><span data-en>The Manifesto</span><span data-es>El Manifiesto</span></div>
     <div class="section-tag-line rv"></div>
-    <h2 class="section-title rv"><span data-en>What you are<br><em>about to see</em></span><span data-es>Lo que estás<br><em>a punto de ver</em></span></h2>
+    <h2 class="section-title rv"><span data-en>Where botany becomes<br><em>narrative</em></span><span data-es>Donde la botánica<br>se vuelve <em>narrativa</em></span></h2>
     <div id="intro-answer">
       <p class="rv">
-        <span data-en><strong>Luxury and Blush Events</strong> is a luxury destination wedding planning studio in Mexico, led by founder and creative director <strong>Thelma</strong>. With <strong>20 years of experience</strong> and <strong>404 weddings realized</strong> across <strong>16 destinations</strong>, the studio directs weddings like editorial film productions — blending high-end design, botanical art and flawless coordination.</span>
-        <span data-es><strong>Luxury and Blush Events</strong> es un estudio de wedding planning de lujo en México, dirigido por su fundadora y directora creativa <strong>Thelma</strong>. Con <strong>20 años de experiencia</strong> y <strong>404 bodas realizadas</strong> en <strong>16 destinos</strong>, el estudio dirige bodas como producciones editoriales de cine — fusionando diseño de alto nivel, arte botánico y coordinación impecable.</span>
+        <span data-en>We believe in the luxury of the unexpected. At <strong>Aurea 1618</strong>, the floral &amp; decor studio of <strong>Luxury and Blush Events</strong>, we redefine destination floristry by fusing polished minimalism with a deliberate, exotic botanical extravagance.</span>
+        <span data-es>Creemos en el lujo de lo inesperado. En <strong>Aurea 1618</strong>, el estudio de floral &amp; decor de <strong>Luxury and Blush Events</strong>, redefinimos la floristería de destino fusionando un minimalismo pulido con una extravagancia botánica deliberada y exótica.</span>
       </p>
       <p class="rv">
-        <span data-en>This gallery is a curated archive of real weddings in Tulum, Cancún, Playa del Carmen, Puerto Vallarta, Chapala, Ajijic, Tequila, San Miguel de Allende, Guadalajara — and beyond, to Paris and Versailles. Every image is a frame from a story the studio directed from concept to premiere.</span>
-        <span data-es>Esta galería es un archivo curado de bodas reales en Tulum, Cancún, Playa del Carmen, Puerto Vallarta, Chapala, Ajijic, Tequila, San Miguel de Allende, Guadalajara — y más allá, hasta París y Versalles. Cada imagen es un encuadre de una historia que el estudio dirigió del concepto al estreno.</span>
+        <span data-en>We do not place arrangements on stages; we erect living scenographies. We design immersive installations that dialogue with the architecture, the light and the wild nature of the world's most dazzling locations. Under the geometric precision of the <strong>Golden Ratio (1.618)</strong>, we curate rare species, sculptural forms and organic textures to create a continuous sensory environment.</span>
+        <span data-es>No colocamos arreglos sobre escenarios; erigimos escenografías vivas. Diseñamos instalaciones inmersivas que dialogan con la arquitectura, la luz y la naturaleza salvaje de las locaciones más deslumbrantes del mundo. Bajo la precisión geométrica de la <strong>Proporción Áurea (1.618)</strong>, curamos especies raras, formas escultóricas y texturas orgánicas para crear un entorno sensorial continuo.</span>
+      </p>
+      <p class="rv">
+        <span data-en>Your wedding does not need decoration; it demands an art direction that turns every instant into a living, unrepeatable work.</span>
+        <span data-es>Tu boda no necesita decoración; exige una dirección de arte que convierta cada instante en una obra viva e irrepetible.</span>
       </p>
     </div>
     <div class="intro-stats">
       <div class="intro-stat rv"><div class="intro-stat-number" data-count="20">0</div><div class="intro-stat-label"><span data-en>Years of Experience</span><span data-es>Años de Experiencia</span></div></div>
-      <div class="intro-stat rv"><div class="intro-stat-number" data-count="404">0</div><div class="intro-stat-label"><span data-en>Weddings Realized</span><span data-es>Bodas Realizadas</span></div></div>
+      <div class="intro-stat rv"><div class="intro-stat-number" data-count="404">0</div><div class="intro-stat-label"><span data-en>Events Realized</span><span data-es>Eventos Realizados</span></div></div>
       <div class="intro-stat rv"><div class="intro-stat-number" data-count="16">0</div><div class="intro-stat-label"><span data-en>Destinations</span><span data-es>Destinos</span></div></div>
       <div class="intro-stat rv"><div class="intro-stat-number" data-count="100" data-suffix="%">0</div><div class="intro-stat-label"><span data-en>Custom Design</span><span data-es>Diseño Personalizado</span></div></div>
     </div>
   </div>
-  <div class="intro-img rv"><img src="images/intro.webp" alt="Bride in a couture gown at a luxury hacienda wedding planned by Luxury and Blush Events in Mexico" loading="lazy"></div>
+  <div class="intro-img rv"><img src="images/g/bere-isaac-2.webp" alt="Sculptural blush floral installation detail by Aurea 1618" loading="lazy"></div>
+</section>
+
+<!-- PILARES ESCENOGRÁFICOS -->
+<section id="pilares">
+  <div class="pilares-head">
+    <div class="section-tag rv" style="text-align:center"><span data-en>Scenographic Pillars</span><span data-es>Pilares Escenográficos</span></div>
+    <h2 class="section-title rv" style="text-align:center"><span data-en>Three ways to build<br><em>a living stage</em></span><span data-es>Tres formas de erigir<br><em>un escenario vivo</em></span></h2>
+  </div>
+  <div class="pilar  rv">
+    <div class="pilar-img"><img src="images/g/decor/06.webp" alt="Ceremonial Sets &amp; Architectural Altars by Aurea 1618" loading="lazy"></div>
+    <div>
+      <div class="pilar-n">01</div>
+      <h3><span data-en>Ceremonial Sets &amp; <em>Architectural Altars</em></span><span data-es>Sets Ceremoniales y <em>Altares Arquitectónicos</em></span></h3>
+      <div class="pilar-concept"><span data-en>The frame of the rite</span><span data-es>El marco del rito</span></div>
+      <p><span data-en>We reinvent the traditional altar. We design asymmetric, monumental structures that seem to sprout from the location itself, framing the &ldquo;I do&rdquo; with organic silhouettes, exotic species and a scale conceived for the cinematic lens.</span><span data-es>Reinventamos el altar tradicional. Diseñamos estructuras asimétricas y monumentales que parecen brotar de la propia locación, encuadrando el «sí, acepto» con siluetas orgánicas, especies exóticas y una escala pensada para la lente cinematográfica.</span></p>
+      <div class="badges"><span class="badge"><span data-en>Living Sculpture</span><span data-es>Escultura Viva</span></span><span class="badge"><span data-en>1.618 Proportion</span><span data-es>Proporción 1.618</span></span><span class="badge"><span data-en>Editorial Frame</span><span data-es>Frame Editorial</span></span></div>
+    </div>
+  </div>
+  <div class="pilar rev rv">
+    <div class="pilar-img"><img src="images/g/decor/02.webp" alt="Immersive Spatial Atmospheres by Aurea 1618" loading="lazy"></div>
+    <div>
+      <div class="pilar-n">02</div>
+      <h3><span data-en>Immersive <em>Spatial Atmospheres</em></span><span data-es>Atmósferas <em>Espaciales Inmersivas</em></span></h3>
+      <div class="pilar-concept"><span data-en>Large-format spatial transformation</span><span data-es>Transformación espacial de gran formato</span></div>
+      <p><span data-en>Aerial installations, botanical tunnels and ephemeral landscaping in breathtaking locations. We design the spatial transition of the event so your guests inhabit an immersive atmosphere from the first step to the last dance.</span><span data-es>Instalaciones aéreas, túneles botánicos y paisajismo efímero en locaciones que quitan el aliento. Diseñamos la transición espacial del evento para que tus invitados habiten una atmósfera inmersiva desde el primer paso hasta el último baile.</span></p>
+      <div class="badges"><span class="badge"><span data-en>Large Format</span><span data-es>Gran Formato</span></span><span class="badge"><span data-en>360° Coverage</span><span data-es>Cobertura 360°</span></span><span class="badge"><span data-en>Destination Exclusive</span><span data-es>Destination Exclusive</span></span></div>
+    </div>
+  </div>
+  <div class="pilar  rv">
+    <div class="pilar-img"><img src="images/g/villa-amodei-od/19.webp" alt="High-Couture Tablescaping by Aurea 1618" loading="lazy"></div>
+    <div>
+      <div class="pilar-n">03</div>
+      <h3><span data-en>High-Couture <em>Tablescaping</em></span><span data-es>Tablescaping de <em>Alta Costura</em></span></h3>
+      <div class="pilar-concept"><span data-en>The table as a sensory gallery</span><span data-es>La mesa como galería sensorial</span></div>
+      <p><span data-en>The architecture of the banquet elevated to art. Curation of sculptural vessels, low-scale exotic botanicals to preserve the flow of conversation, and a precise chromatic play that dialogues with artisanal candles and fine textiles.</span><span data-es>La arquitectura del banquete elevada al arte. Curaduría de floreros escultóricos, botánica exótica de escala baja para preservar la fluidez de la conversación, y un juego cromático preciso que dialoga con velas artesanales y textiles finos.</span></p>
+      <div class="badges"><span class="badge"><span data-en>Clean Look</span><span data-es>Clean Look</span></span><span class="badge"><span data-en>Rare Botanicals</span><span data-es>Botánica Rara</span></span><span class="badge"><span data-en>Table Curation</span><span data-es>Curaduría de Mesa</span></span></div>
+    </div>
+  </div>
 </section>
 
 <!-- GALLERY -->
 <section id="gallery">
-  <div class="section-tag rv"><span data-en>The Collection</span><span data-es>La Colección</span></div>
-  <h2 class="section-title rv"><span data-en>Scenes that keep<br><em>breathing</em></span><span data-es>Escenas que siguen<br><em>respirando</em></span></h2>
-  <p class="section-text rv" style="margin:0 auto"><span data-en>Explore the archive by chapter — real weddings, epic destinations and living botanical art, photographed across Mexico's most exclusive locations.</span><span data-es>Explora el archivo por capítulos — bodas reales, destinos épicos y arte botánico vivo, fotografiados en las locaciones más exclusivas de México.</span></p>
+  <div class="section-tag rv"><span data-en>Selected Work</span><span data-es>Obra Selecta</span></div>
+  <h2 class="section-title rv"><span data-en>Living<br><em>scenography</em></span><span data-es>Escenografía<br><em>viva</em></span></h2>
+  <p class="section-text rv" style="margin:0 auto"><span data-en>Installations, altars, tablescapes and botanical art from real destination events — where the flower stops decorating and starts directing.</span><span data-es>Instalaciones, altares, tablescapes y arte botánico de eventos reales de destino — donde la flor deja de decorar y empieza a dirigir.</span></p>
 
   <div class="masonry" id="masonry">
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/lm-1.webp" alt="L and M luxury garden wedding in Mexico 2025 by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">L &amp; <em>M</em></div><div class="m-caption-meta">México · 2025</div></figcaption></figure>
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/diana-edgar-1.webp" alt="Diana and Edgar oceanfront wedding by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">D &amp; <em>E</em></div><div class="m-caption-meta">Riviera Nayarit · 2024</div></figcaption></figure>
-    <figure class="m-item rv" data-cat="floral"><img src="images/g/sn-floral.webp" alt="Vibrant bridal bouquet floral design by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>Floral Design</span><span data-es>Diseño Floral</span></div><div class="m-caption-meta"><span data-en>Living Art</span><span data-es>Arte Vivo</span></div></figcaption></figure>
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/bere-isaac-1.webp" alt="Bere and Isaac beach wedding by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">B &amp; <em>I</em></div><div class="m-caption-meta">Punta de Mita · 2018</div></figcaption></figure>
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/villa-amodei-1.webp" alt="Editorial villa wedding by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">Villa <em>Amodei</em></div><div class="m-caption-meta"><span data-en>Editorial</span><span data-es>Editorial</span></div></figcaption></figure>
-    <figure class="m-item rv" data-cat="floral"><img src="images/g/lm-floral.webp" alt="Wedding tablescape and floral styling by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Table</span><span data-es>La Mesa</span></div><div class="m-caption-meta"><span data-en>Living Art</span><span data-es>Arte Vivo</span></div></figcaption></figure>
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/ms-2.webp" alt="M and S wedding in Guadalajara by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">M &amp; <em>S</em></div><div class="m-caption-meta">Guadalajara · 2024</div></figcaption></figure>
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/boho-1.webp" alt="Boho beach wedding with vintage van in Tulum by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>Boho</span><span data-es>Boho</span></div><div class="m-caption-meta">Tulum</div></figcaption></figure>
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/fernanda-oscar-1.webp" alt="Fernanda and Oscar hacienda wedding by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">F &amp; <em>O</em></div><div class="m-caption-meta">México · 2018</div></figcaption></figure>
-    <figure class="m-item rv" data-cat="floral"><img src="images/g/se-2.webp" alt="Wedding rings and bridal shoes detail by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Details</span><span data-es>Los Detalles</span></div><div class="m-caption-meta"><span data-en>Fine Art</span><span data-es>Arte Fino</span></div></figcaption></figure>
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/bosque-1.webp" alt="Forest wedding among the pines by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Forest</span><span data-es>El Bosque</span></div><div class="m-caption-meta">Jalisco</div></figcaption></figure>
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/sn-2.webp" alt="S and N colorful hacienda wedding by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">S &amp; <em>N</em></div><div class="m-caption-meta">México · 2024</div></figcaption></figure>
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/hacienda-1.webp" alt="First dance under chandeliers at a hacienda wedding by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>First Dance</span><span data-es>Primer Baile</span></div><div class="m-caption-meta">México</div></figcaption></figure>
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/paris-2.webp" alt="Paris engagement with the Eiffel Tower by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name">París</div><div class="m-caption-meta"><span data-en>France</span><span data-es>Francia</span></div></figcaption></figure>
-    <figure class="m-item rv" data-cat="weddings"><img src="images/g/playa-1.webp" alt="Beach wedding at sunset in Mexico by Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Coast</span><span data-es>La Costa</span></div><div class="m-caption-meta">México</div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/decor/01.webp" alt="Monumental suspended installation by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>Suspended</span><span data-es>Suspendida</span></div><div class="m-caption-meta"><span data-en>Installation</span><span data-es>Instalación</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/villa-amodei-od/13.webp" alt="Citrus botanical tablescape by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Banquet</span><span data-es>El Banquete</span></div><div class="m-caption-meta"><span data-en>Villa Amodei</span><span data-es>Villa Amodei</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/decor/05.webp" alt="Architectural floral aisle by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Aisle</span><span data-es>El Pasillo</span></div><div class="m-caption-meta"><span data-en>Architectural</span><span data-es>Arquitectónico</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/lm-floral.webp" alt="White sculptural centerpiece by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Centerpiece</span><span data-es>El Centro</span></div><div class="m-caption-meta"><span data-en>Clean Luxe</span><span data-es>Clean Luxe</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/sn/01.webp" alt="Bridal bouquet of rare botanicals by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Bouquet</span><span data-es>El Ramo</span></div><div class="m-caption-meta"><span data-en>Haute Couture</span><span data-es>Alta Costura</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/villa-amodei-od/20.webp" alt="Citrus and botanical runner by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Runner</span><span data-es>El Camino</span></div><div class="m-caption-meta"><span data-en>Rare Botanicals</span><span data-es>Botánica Rara</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/decor/10.webp" alt="Vibrant floral table runner by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>Chromatic</span><span data-es>Cromático</span></div><div class="m-caption-meta"><span data-en>Living Art</span><span data-es>Arte Vivo</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/villa-amodei-floral.webp" alt="Lemon tablescape detail by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>Tablescape</span><span data-es>Tablescape</span></div><div class="m-caption-meta"><span data-en>Curation</span><span data-es>Curaduría</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/sn/11.webp" alt="Bougainvillea botanical staircase by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>Botanical Tunnel</span><span data-es>Túnel Botánico</span></div><div class="m-caption-meta"><span data-en>Immersive</span><span data-es>Inmersivo</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/lm/05.webp" alt="Sculptural white florals by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>Sculptural</span><span data-es>Escultórico</span></div><div class="m-caption-meta"><span data-en>1.618</span><span data-es>1.618</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/decor/18.webp" alt="White floral tablescape by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Table</span><span data-es>La Mesa</span></div><div class="m-caption-meta"><span data-en>Sensory Gallery</span><span data-es>Galería Sensorial</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/villa-amodei-od/16.webp" alt="Outdoor botanical banquet by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>Al Fresco</span><span data-es>Al Fresco</span></div><div class="m-caption-meta"><span data-en>Destination</span><span data-es>Destino</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/sn-floral.webp" alt="Exotic bridal bouquet by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>Botanical Art</span><span data-es>Arte Botánico</span></div><div class="m-caption-meta"><span data-en>Exotic</span><span data-es>Exótico</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/lm/06.webp" alt="Fine tablescape detail by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Detail</span><span data-es>El Detalle</span></div><div class="m-caption-meta"><span data-en>Fine Art</span><span data-es>Arte Fino</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/decor/16.webp" alt="Gold charger and candlelight macro by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>Texture</span><span data-es>Textura</span></div><div class="m-caption-meta"><span data-en>Macro</span><span data-es>Macro</span></div></figcaption></figure>
+    <figure class="m-item rv" data-cat="floral"><img src="images/g/villa-amodei-od/15.webp" alt="Poolside botanical banquet by Aurea 1618 — Luxury and Blush Events" loading="lazy"><figcaption class="m-caption"><div class="m-caption-name"><span data-en>The Setting</span><span data-es>El Escenario</span></div><div class="m-caption-meta"><span data-en>Large Format</span><span data-es>Gran Formato</span></div></figcaption></figure>
   </div>
 </section>
 
-<!-- STORIES -->
+<!-- ARCHIVO -->
 <section id="stories">
   <div class="stories-header">
     <div>
-      <div class="section-tag rv"><span data-en>Full Stories</span><span data-es>Historias Completas</span></div>
+      <div class="section-tag rv"><span data-en>The Archive</span><span data-es>El Archivo</span></div>
       <div class="section-tag-line rv"></div>
-      <h2 class="section-title rv"><span data-en>Enter each<br><em>premiere</em></span><span data-es>Entra a cada<br><em>estreno</em></span></h2>
+      <h2 class="section-title rv"><span data-en>Every commission,<br><em>documented</em></span><span data-es>Cada comisión,<br><em>documentada</em></span></h2>
     </div>
-    <p class="section-text rv"><span data-en>Each wedding is a private commission with its own complete gallery. Open a story and walk through every scene — from the first frame to the last dance.</span><span data-es>Cada boda es una comisión privada con su propia galería completa. Abre una historia y recorre cada escena — del primer encuadre al último baile.</span></p>
+    <p class="section-text rv"><span data-en>Each project is a private commission with its own complete gallery — the installations, the altars, the tables and the botanical art, exactly as they were built on location.</span><span data-es>Cada proyecto es una comisión privada con su galería completa — las instalaciones, los altares, las mesas y el arte botánico, tal como se erigieron en locación.</span></p>
   </div>
-    <h3 class="col-cat rv"><span data-en>Real Weddings</span><span data-es>Bodas Reales</span></h3>
-  <div class="galleries-grid">
-    <a href="galleries/bere-isaac.html" class="gallery-card rv"><img src="images/g/bere-isaac-1.webp" alt="B and I gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">B &amp; <em>I</em></div><div class="gallery-card-meta">Punta de Mita · 2018</div></div></a>
-    <a href="galleries/fernanda-oscar.html" class="gallery-card rv"><img src="images/g/fernanda-oscar-1.webp" alt="F and O gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">F &amp; <em>O</em></div><div class="gallery-card-meta">México · 2018</div></div></a>
-    <a href="galleries/lm.html" class="gallery-card rv"><img src="images/g/lm-1.webp" alt="L and M gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">L &amp; <em>M</em></div><div class="gallery-card-meta">México · 2025</div></div></a>
-    <a href="galleries/ms.html" class="gallery-card rv"><img src="images/g/ms-2.webp" alt="M and S gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">M &amp; <em>S</em></div><div class="gallery-card-meta">Guadalajara · 2024</div></div></a>
-    <a href="galleries/se.html" class="gallery-card rv"><img src="images/g/se-1.webp" alt="S and E gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">S &amp; <em>E</em></div><div class="gallery-card-meta">Chapala · 2023</div></div></a>
-    <a href="galleries/diana-edgar.html" class="gallery-card rv"><img src="images/g/diana-edgar-1.webp" alt="D and E gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">D &amp; <em>E</em></div><div class="gallery-card-meta">Riviera Nayarit · 2024</div></div></a>
-    <a href="galleries/sn.html" class="gallery-card rv"><img src="images/g/sn-2.webp" alt="S and N gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">S &amp; <em>N</em></div><div class="gallery-card-meta">México · 2024</div></div></a>
-    <a href="galleries/villa-amodei-i.html" class="gallery-card rv"><img src="images/g/villa-amodei-1.webp" alt="Villa Amodei gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">Villa <em>Amodei</em></div><div class="gallery-card-meta">Editorial</div></div></a>
-    <a href="galleries/villa-amodei-od.html" class="gallery-card rv"><img src="images/g/villa-amodei-od/01.webp" alt="Olivia and David gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">Olivia &amp; <em>David</em></div><div class="gallery-card-meta">Villa Amodei</div></div></a>
-    <a href="galleries/hacienda.html" class="gallery-card rv"><img src="images/g/hacienda-1.webp" alt="La Hacienda gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">La <em>Hacienda</em></div><div class="gallery-card-meta">México</div></div></a>
-    <a href="galleries/civil.html" class="gallery-card rv"><img src="images/g/civil-1.webp" alt="Lo Civil gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">Lo <em>Civil</em></div><div class="gallery-card-meta">Guadalajara</div></div></a>
-    <a href="galleries/paige-mathew.html" class="gallery-card rv"><img src="images/g/paige-mathew/01.webp" alt="Paige and Mathew gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">Paige &amp; <em>Mathew</em></div><div class="gallery-card-meta">Tulum</div></div></a>
-    <a href="galleries/dorado.html" class="gallery-card rv"><img src="images/g/dorado/01.webp" alt="El Dorado gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">El <em>Dorado</em></div><div class="gallery-card-meta">México</div></div></a>
-  </div>
-  <h3 class="col-cat rv"><span data-en>Destinations</span><span data-es>Ubicaciones</span></h3>
-  <div class="galleries-grid">
-    <a href="galleries/paris-versalles.html" class="gallery-card rv"><img src="images/g/paris-2.webp" alt="París and Versalles gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">París &amp; <em>Versalles</em></div><div class="gallery-card-meta">France</div></div></a>
-    <a href="galleries/boho-tulum.html" class="gallery-card rv"><img src="images/g/boho-1.webp" alt="Boho Tulum gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">Boho <em>Tulum</em></div><div class="gallery-card-meta">Riviera Maya</div></div></a>
-    <a href="galleries/playa.html" class="gallery-card rv"><img src="images/g/playa-1.webp" alt="La Costa gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">La <em>Costa</em></div><div class="gallery-card-meta">México</div></div></a>
-    <a href="galleries/bosque.html" class="gallery-card rv"><img src="images/g/bosque-1.webp" alt="El Bosque gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">El <em>Bosque</em></div><div class="gallery-card-meta">Jalisco</div></div></a>
-    <a href="galleries/tequila.html" class="gallery-card rv"><img src="images/g/tequila-1.webp" alt="El Agave gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">El <em>Agave</em></div><div class="gallery-card-meta">Tequila</div></div></a>
-  </div>
-  <h3 class="col-cat rv"><span data-en>Design &amp; Décor</span><span data-es>Diseño y Montaje</span></h3>
-  <div class="galleries-grid">
-    <a href="galleries/decor.html" class="gallery-card rv"><img src="images/g/decor/01.webp" alt="Diseño and Montaje gallery by Luxury and Blush Events" loading="lazy"><div class="gallery-card-overlay"></div><div class="gallery-card-cta"><span data-en>View Gallery</span><span data-es>Ver Galería</span></div><div class="gallery-card-info"><div class="gallery-card-name">Diseño &amp; <em>Montaje</em></div><div class="gallery-card-meta">Floral Art</div></div></a>
+  <div class="archive-list">
+    <a class="arch-row rv" href="galleries/decor.html">
+      <div class="arch-num">01</div>
+      <div class="arch-thumb"><img src="images/g/decor/02.webp" alt="Scenography and Installations floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>Scenography &amp; <em>Installations</em></span><span data-es>Escenografía e <em>Instalaciones</em></span></div><div class="arch-loc">México</div></div>
+      <div class="arch-count">18 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/villa-amodei-od.html">
+      <div class="arch-num">02</div>
+      <div class="arch-thumb"><img src="images/g/villa-amodei-od/19.webp" alt="Olivia and David floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>Olivia &amp; <em>David</em></span><span data-es>Olivia &amp; <em>David</em></span></div><div class="arch-loc">Villa Amodei</div></div>
+      <div class="arch-count">35 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/sn.html">
+      <div class="arch-num">03</div>
+      <div class="arch-thumb"><img src="images/g/sn-floral.webp" alt="S and N floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>S &amp; <em>N</em></span><span data-es>S &amp; <em>N</em></span></div><div class="arch-loc">México</div></div>
+      <div class="arch-count">12 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/lm.html">
+      <div class="arch-num">04</div>
+      <div class="arch-thumb"><img src="images/g/lm-floral.webp" alt="L and M floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>L &amp; <em>M</em></span><span data-es>L &amp; <em>M</em></span></div><div class="arch-loc">México</div></div>
+      <div class="arch-count">7 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/villa-amodei-i.html">
+      <div class="arch-num">05</div>
+      <div class="arch-thumb"><img src="images/g/villa-amodei-1.webp" alt="Villa Amodei floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>Villa <em>Amodei</em></span><span data-es>Villa <em>Amodei</em></span></div><div class="arch-loc">Editorial</div></div>
+      <div class="arch-count">19 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/bere-isaac.html">
+      <div class="arch-num">06</div>
+      <div class="arch-thumb"><img src="images/g/bere-isaac-2.webp" alt="Bere and Isaac floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>Bere &amp; <em>Isaac</em></span><span data-es>Bere &amp; <em>Isaac</em></span></div><div class="arch-loc">Punta de Mita</div></div>
+      <div class="arch-count">10 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/fernanda-oscar.html">
+      <div class="arch-num">07</div>
+      <div class="arch-thumb"><img src="images/g/fernanda-oscar-1.webp" alt="Fernanda and Oscar floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>Fernanda &amp; <em>Oscar</em></span><span data-es>Fernanda &amp; <em>Oscar</em></span></div><div class="arch-loc">México</div></div>
+      <div class="arch-count">6 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/se.html">
+      <div class="arch-num">08</div>
+      <div class="arch-thumb"><img src="images/g/se-2.webp" alt="S and E floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>S &amp; <em>E</em></span><span data-es>S &amp; <em>E</em></span></div><div class="arch-loc">Chapala</div></div>
+      <div class="arch-count">7 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/diana-edgar.html">
+      <div class="arch-num">09</div>
+      <div class="arch-thumb"><img src="images/g/diana-edgar-3.webp" alt="Diana and Edgar floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>Diana &amp; <em>Edgar</em></span><span data-es>Diana &amp; <em>Edgar</em></span></div><div class="arch-loc">Riviera Nayarit</div></div>
+      <div class="arch-count">12 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/boho-tulum.html">
+      <div class="arch-num">10</div>
+      <div class="arch-thumb"><img src="images/g/boho-2.webp" alt="Boho Tulum floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>Boho <em>Tulum</em></span><span data-es>Boho <em>Tulum</em></span></div><div class="arch-loc">Riviera Maya</div></div>
+      <div class="arch-count">12 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/ms.html">
+      <div class="arch-num">11</div>
+      <div class="arch-thumb"><img src="images/g/ms-2.webp" alt="M and S floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>M &amp; <em>S</em></span><span data-es>M &amp; <em>S</em></span></div><div class="arch-loc">Guadalajara</div></div>
+      <div class="arch-count">11 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/hacienda.html">
+      <div class="arch-num">12</div>
+      <div class="arch-thumb"><img src="images/g/hacienda-1.webp" alt="La Hacienda floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>La <em>Hacienda</em></span><span data-es>La <em>Hacienda</em></span></div><div class="arch-loc">México</div></div>
+      <div class="arch-count">10 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/civil.html">
+      <div class="arch-num">13</div>
+      <div class="arch-thumb"><img src="images/g/civil-1.webp" alt="Lo Civil floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>Lo <em>Civil</em></span><span data-es>Lo <em>Civil</em></span></div><div class="arch-loc">Guadalajara</div></div>
+      <div class="arch-count">15 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/playa.html">
+      <div class="arch-num">14</div>
+      <div class="arch-thumb"><img src="images/g/playa-1.webp" alt="La Costa floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>La <em>Costa</em></span><span data-es>La <em>Costa</em></span></div><div class="arch-loc">México</div></div>
+      <div class="arch-count">9 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/bosque.html">
+      <div class="arch-num">15</div>
+      <div class="arch-thumb"><img src="images/g/bosque-1.webp" alt="El Bosque floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>El <em>Bosque</em></span><span data-es>El <em>Bosque</em></span></div><div class="arch-loc">Jalisco</div></div>
+      <div class="arch-count">12 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/paris-versalles.html">
+      <div class="arch-num">16</div>
+      <div class="arch-thumb"><img src="images/g/paris-1.webp" alt="París and Versalles floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>París &amp; <em>Versalles</em></span><span data-es>París &amp; <em>Versalles</em></span></div><div class="arch-loc">France</div></div>
+      <div class="arch-count">9 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/dorado.html">
+      <div class="arch-num">17</div>
+      <div class="arch-thumb"><img src="images/g/dorado/01.webp" alt="El Dorado floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>El <em>Dorado</em></span><span data-es>El <em>Dorado</em></span></div><div class="arch-loc">México</div></div>
+      <div class="arch-count">5 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/tequila.html">
+      <div class="arch-num">18</div>
+      <div class="arch-thumb"><img src="images/g/tequila-1.webp" alt="El Agave floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>El <em>Agave</em></span><span data-es>El <em>Agave</em></span></div><div class="arch-loc">Tequila</div></div>
+      <div class="arch-count">3 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
+    <a class="arch-row rv" href="galleries/paige-mathew.html">
+      <div class="arch-num">19</div>
+      <div class="arch-thumb"><img src="images/g/paige-mathew/01.webp" alt="Paige and Mathew floral design by Aurea 1618" loading="lazy"></div>
+      <div><div class="arch-title"><span data-en>Paige &amp; <em>Mathew</em></span><span data-es>Paige &amp; <em>Mathew</em></span></div><div class="arch-loc">Tulum</div></div>
+      <div class="arch-count">3 <span data-en>Images</span><span data-es>Imágenes</span></div>
+      <div class="arch-view"><span data-en>View →</span><span data-es>Ver →</span></div>
+    </a>
   </div>
 </section>
 
@@ -593,9 +785,9 @@ footer{padding:40px 24px}
   <div class="band-bg" data-parallax="0.12"><img src="images/quote-bg.webp" alt="" loading="lazy" aria-hidden="true"></div>
   <div class="band-overlay"></div>
   <blockquote class="rv">
-    <span data-en>"Every detail is a frame. Every moment, a scene. And you are always <em>the lead</em>."</span>
-    <span data-es>"Cada detalle es un encuadre. Cada momento, una escena. Y tú siempre eres <em>el protagonista</em>."</span>
-    <cite>Thelma · <span data-en>Founder & Creative Director</span><span data-es>Fundadora y Directora Creativa</span> · Luxury and Blush Events</cite>
+    <span data-en>"We don't place arrangements on a stage. We build the stage — and it is <em>alive</em>."</span>
+    <span data-es>"No colocamos arreglos sobre un escenario. Erigimos el escenario — y está <em>vivo</em>."</span>
+    <cite>Aurea 1618 · <span data-en>Florals &amp; Decor</span><span data-es>Floral &amp; Decor</span> · Luxury and Blush Events</cite>
   </blockquote>
 </section>
 
@@ -653,15 +845,16 @@ footer{padding:40px 24px}
   <div class="band-bg" data-parallax="0.12"><img src="images/cta-bg.webp" alt="" loading="lazy" aria-hidden="true"></div>
   <div class="band-overlay"></div>
   <div class="section-tag rv"><span data-en>Your Story</span><span data-es>Tu Historia</span></div>
-  <h2 class="section-title rv"><span data-en>Ready to direct<br><em>your own premiere?</em></span><span data-es>¿Lista para dirigir<br><em>tu propio estreno?</em></span></h2>
-  <p class="section-text rv"><span data-en>A limited number of Premiere weddings each year. Apply and let us begin crafting your story.</span><span data-es>Un número limitado de bodas Premiere al año. Aplica y déjanos comenzar a crear tu historia.</span></p>
-  <a href="https://luxuryandblush.com/luxury-and-blush/index.html#casting" class="btn btn-gold rv"><span data-en>Submit your Casting</span><span data-es>Envía tu Casting</span></a>
+  <h2 class="section-title rv"><span data-en>Ready to commission<br><em>your scenography?</em></span><span data-es>¿Lista para comisionar<br><em>tu escenografía?</em></span></h2>
+  <p class="section-text rv"><span data-en>A limited number of destination commissions each year. Tell us the location and let the botany do the directing.</span><span data-es>Un número limitado de comisiones de destino al año. Cuéntanos la locación y deja que la botánica dirija.</span></p>
+  <a href="https://luxuryandblush.com/luxury-and-blush/index.html#casting" class="btn btn-gold rv"><span data-en>Commission your destination scenography</span><span data-es>Comisiona tu escenografía de destino</span></a>
 </section>
 </main>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Luxury and Blush Events</div>
+  <div class="footer-logo">Aurea 1618</div>
+  <p class="footer-copy" style="margin-top:-14px;margin-bottom:26px"><span data-en>Florals &amp; Decor · by Luxury and Blush Events</span><span data-es>Floral &amp; Decor · por Luxury and Blush Events</span></p>
   <div class="footer-social">
     <a href="https://www.instagram.com/luxury.and.blush" target="_blank" rel="noopener">Instagram</a>
     <a href="https://www.facebook.com/weddingplannerguadalajara/" target="_blank" rel="noopener">Facebook</a>
@@ -824,7 +1017,7 @@ document.querySelectorAll('.faq-item').forEach(function(item){
 
 /* ===== SMOOTH IMAGE FADE-IN (gallery/intro pop-free) ===== */
 (function(){
-  var imgs=document.querySelectorAll('.m-item img, .intro-img img, .gallery-card img');
+  var imgs=document.querySelectorAll('.m-item img, .intro-img img, .pilar-img img, .arch-thumb img');
   imgs.forEach(function(im){
     im.classList.add('fade-img');
     if(im.complete && im.naturalWidth>0){ im.classList.add('is-loaded'); return; }
