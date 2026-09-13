@@ -71,11 +71,13 @@ img{display:block;max-width:100%}
 .rc{font-family:var(--sans);font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:#8b7355;white-space:nowrap}
 .rv{font-family:var(--sans);font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);white-space:nowrap}
 /* TILES (home) */
-.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:1200px;margin:0 auto;padding:0 44px 96px}
-.tile{position:relative;aspect-ratio:3/4;overflow:hidden;text-decoration:none;background:var(--dark)}
-.tile img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.16,1,.3,1)}
-.tile:hover img{transform:scale(1.06)}
-.tile span{position:absolute;inset:0;display:flex;align-items:flex-end;padding:16px;background:linear-gradient(0deg,rgba(16,15,14,.66),rgba(16,15,14,.05) 62%);font-family:var(--sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#fff}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1180px;margin:0 auto;padding:104px 44px 104px}
+.tile{position:relative;aspect-ratio:4/5;overflow:hidden;text-decoration:none;background:var(--warm)}
+.tile.wide{grid-column:span 2;aspect-ratio:8/5}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.tile:hover img{transform:scale(1.05)}
+.tile span{position:absolute;inset:0;display:flex;align-items:flex-end;padding:24px 26px;background:linear-gradient(0deg,rgba(16,15,14,.6),rgba(16,15,14,0) 58%);font-family:var(--sans);font-size:10.5px;letter-spacing:3.5px;text-transform:uppercase;color:#fff;transition:background .5s}
+.tile:hover span{background:linear-gradient(0deg,rgba(16,15,14,.76),rgba(16,15,14,.08) 62%)}
 /* TEXT BLOCK (atelier/education) */
 .tb{max-width:720px;margin:0 auto;padding:10px 44px 74px}
 .tb p{font-family:var(--sans);font-size:14.5px;line-height:2;color:var(--muted);font-weight:300;margin-bottom:18px}
@@ -103,7 +105,7 @@ footer{border-top:1px solid var(--blush);text-align:center;padding:54px 24px 46p
 .nav-links.show{opacity:1;pointer-events:auto}.nav-links a{font-size:13px;letter-spacing:4px}.nav-tog{display:flex;z-index:130}
 .hero-in{padding:0 24px 52px}.gp,.arch,.tb,.credits{padding-left:20px;padding-right:20px}
 .gp-row{gap:8px;margin-bottom:8px}.gp-row.single .gp-ph{flex:1}
-.tiles{grid-template-columns:repeat(2,1fr);padding:0 20px 64px}
+.tiles{grid-template-columns:repeat(2,1fr);gap:10px;padding:60px 20px}
 .row{grid-template-columns:32px 62px 1fr;gap:13px}.rt{width:62px;height:46px}.rc,.rv{display:none}
 }
 @media(prefers-reduced-motion:reduce){.gp-ph img{opacity:1!important}}
@@ -131,7 +133,7 @@ body.es [data-es]{display:inline}
     <h1><span data-en>Architectural <em>Botanicals</em></span><span data-es>Botánica <em>arquitectónica</em></span></h1>
   </div>
 </section>
-<div class="tiles"><a class="tile" href="weddings.html"><img src="images/g/fernanda-oscar-1.webp" alt="Weddings — Aurea 1618" loading="lazy"><span>Weddings</span></a><a class="tile" href="events.html"><img src="images/g/decor/02.webp" alt="Events — Aurea 1618" loading="lazy"><span>Events</span></a><a class="tile" href="bouquet.html"><img src="images/g/sn/01.webp" alt="Bouquet — Aurea 1618" loading="lazy"><span>Bouquet</span></a><a class="tile" href="atelier.html"><img src="images/g/decor/12.webp" alt="Atelier — Aurea 1618" loading="lazy"><span>Atelier</span></a><a class="tile" href="education.html"><img src="images/g/villa-amodei-od/20.webp" alt="Education — Aurea 1618" loading="lazy"><span>Education</span></a></div>
+<div class="tiles"><a class="tile wide" href="weddings.html"><img src="images/g/fernanda-oscar-1.webp" alt="Weddings — Aurea 1618" loading="lazy"><span>Weddings</span></a><a class="tile " href="events.html"><img src="images/g/decor/15.webp" alt="Events — Aurea 1618" loading="lazy"><span>Events</span></a><a class="tile " href="bouquet.html"><img src="images/g/diana-edgar/01.webp" alt="Bouquet — Aurea 1618" loading="lazy"><span>Bouquet</span></a><a class="tile " href="atelier.html"><img src="images/g/decor/07.webp" alt="Atelier — Aurea 1618" loading="lazy"><span>Atelier</span></a><a class="tile " href="education.html"><img src="images/g/villa-amodei-od/19.webp" alt="Education — Aurea 1618" loading="lazy"><span>Education</span></a></div>
 <div class="gp">
   <div class="gp-row full">
     <figure class="gp-ph"><img src="images/g/decor/01.webp" alt="Floral scenography by Aurea 1618" loading="lazy"></figure>
