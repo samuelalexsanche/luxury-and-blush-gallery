@@ -23,7 +23,7 @@ body{background:var(--cream);color:var(--text);font-family:var(--sans);-webkit-f
 a{color:inherit}
 img{display:block;max-width:100%}
 /* NAV */
-.nav{position:sticky;top:0;z-index:120;display:flex;justify-content:space-between;align-items:center;padding:20px 48px;background:rgba(214,199,184,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(178,148,139,.45)}
+.nav{position:sticky;top:0;z-index:120;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 34px;background:rgba(214,199,184,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(178,148,139,.45)}
 .nav a{text-decoration:none}
 .nav-logo{font-family:var(--serif);font-size:15px;letter-spacing:7px;text-transform:uppercase;color:var(--dark);display:flex;align-items:center;gap:11px;white-space:nowrap}
 .nav-logo img{height:26px;width:auto}
@@ -31,8 +31,8 @@ img{display:block;max-width:100%}
 .nl-txt small{font-family:var(--sans);font-size:7px;letter-spacing:3.2px;text-transform:uppercase;color:var(--muted);margin-top:5px;font-weight:400}
 .f-logo{width:42px;height:auto;margin:0 auto 14px;display:block;opacity:.9}
 .hero img.hero-logo{width:48px;height:auto;object-fit:contain;margin-bottom:18px;opacity:.95}
-.nav-links{display:flex;gap:26px;align-items:center}
-.nav-links a{font-family:var(--sans);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);transition:color .3s;font-weight:400}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{white-space:nowrap;font-family:var(--sans);font-size:9.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);transition:color .3s;font-weight:400}
 .nav-links a:hover,.nav-links a.on{color:var(--dark)}
 .nav-tog{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
 .nav-tog span{width:22px;height:1px;background:var(--dark);display:block}
@@ -115,6 +115,12 @@ footer{background:var(--dark);text-align:center;padding:64px 24px 56px}
 .lbb{position:absolute;background:none;border:none;color:rgba(255,255,255,.7);cursor:pointer;font-family:var(--serif);font-size:42px;line-height:1;transition:color .3s;user-select:none}
 .lbb:hover{color:#fff}
 .lbc{top:20px;right:30px;font-size:30px}.lbp{left:20px;top:50%;transform:translateY(-50%)}.lbn{right:20px;top:50%;transform:translateY(-50%)}
+@media(max-width:1150px){
+.nav-links{position:fixed;inset:0;background:var(--cream);flex-direction:column;justify-content:center;gap:26px;opacity:0;pointer-events:none;transition:opacity .4s}
+.nav-links.show{opacity:1;pointer-events:auto}
+.nav-links a{font-size:13px;letter-spacing:4px}
+.nav-tog{display:flex;z-index:130}
+}
 @media(max-width:900px){
 .nav{padding:15px 22px}.nav-links{position:fixed;inset:0;background:var(--cream);flex-direction:column;justify-content:center;gap:26px;opacity:0;pointer-events:none;transition:opacity .4s}
 .nav-links.show{opacity:1;pointer-events:auto}.nav-links a{font-size:13px;letter-spacing:4px}.nav-tog{display:flex;z-index:130}
@@ -137,7 +143,7 @@ body.es [data-es]{display:inline}
 <body>
 <nav class="nav">
 <a class="nav-logo" href="../index.html"><img src="../images/logo-mark-dark.png" alt="Aurea 1618"><span class="nl-txt">Aurea 1618<small>Florals &amp; Decor</small></span></a>
-<div class="nav-links"><a class="on" href="../weddings.html">Weddings</a><a class="" href="../events.html">Events</a><a class="" href="../bouquet.html">Bouquet</a><a class="" href="../atelier.html">Atelier</a><a class="" href="../education.html">Education</a><a class="" href="../about.html">About</a><a href="https://wa.me/523339686925" target="_blank" rel="noopener">Contact</a><div class="lang"><button data-l="en">EN</button><i>|</i><button data-l="es">ES</button></div></div>
+<div class="nav-links"><a class="" href="../concept.html"><span data-en>The Concept</span><span data-es>El Concepto</span></a><a class="" href="../spatial.html"><span data-en>Spatial Design</span><span data-es>Diseño Espacial</span></a><a class="on" href="../weddings.html"><span data-en>Wedding Florals</span><span data-es>Bodas</span></a><a class="" href="../collection.html"><span data-en>The Collection</span><span data-es>La Colección</span></a><a class="" href="../atelier.html">Atelier</a><a href="https://wa.me/523339686925" target="_blank" rel="noopener"><span data-en>Contact</span><span data-es>Contacto</span></a><div class="lang"><button data-l="en">EN</button><i>|</i><button data-l="es">ES</button></div></div>
 <div class="nav-tog" aria-label="Menu"><span></span><span></span><span></span></div>
 </nav>
 <header class="ph"><div class="k">Commission Nº 15 · Aurea 1618</div><h1>París &amp; <em>Versalles</em></h1></header>
@@ -173,7 +179,7 @@ body.es [data-es]{display:inline}
 <img class="f-logo" src="../images/logo-mark-light.png" alt="" aria-hidden="true">
 <div class="f-mark">Aurea 1618</div>
 <div class="f-l">Florals &amp; Decor · Destination Scenography</div>
-<div class="f-nav"><a href="../weddings.html">Weddings</a><a href="../events.html">Events</a><a href="../bouquet.html">Bouquet</a><a href="../atelier.html">Atelier</a><a href="../education.html">Education</a><a href="../about.html">About</a></div>
+<div class="f-nav"><a href="../concept.html"><span data-en>The Concept</span><span data-es>El Concepto</span></a><a href="../spatial.html"><span data-en>Spatial Design</span><span data-es>Diseño Espacial</span></a><a href="../weddings.html"><span data-en>Wedding Florals</span><span data-es>Bodas</span></a><a href="../collection.html"><span data-en>The Collection</span><span data-es>La Colección</span></a><a href="../atelier.html">Atelier</a></div>
 <div class="f-l"><a href="https://wa.me/523339686925" target="_blank" rel="noopener">WhatsApp +52 33 3968 6925</a></div>
 <div class="f-l" style="margin-top:12px">Wedding planning &amp; direction by <a href="https://luxuryandblush.com/luxury-and-blush/index.html" target="_blank" rel="noopener">Luxury and Blush Events</a></div>
 </footer>
