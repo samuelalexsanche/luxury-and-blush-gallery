@@ -138,6 +138,17 @@ body.es [data-es]{display:inline}
 .lang button{background:none;border:none;cursor:pointer;font-family:var(--sans);font-size:9.5px;letter-spacing:2px;color:var(--muted);padding:2px;font-weight:500}
 .lang button.on{color:var(--gold)}
 .lang i{font-style:normal;color:var(--blush);font-size:9px}
+.wk{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1240px;margin:0 auto;padding:14px 44px 104px}
+.wk-c{position:relative;display:block;text-decoration:none;overflow:hidden;background:var(--warm);aspect-ratio:3/4}
+.wk-c.feat{grid-column:span 2;aspect-ratio:3/2}
+.wk-c img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.16,1,.3,1)}
+.wk-c:hover img{transform:scale(1.05)}
+.wk-m{position:absolute;left:0;right:0;bottom:0;padding:20px 22px;background:linear-gradient(0deg,rgba(49,20,24,.66),rgba(49,20,24,0) 72%)}
+.wk-t{font-family:var(--serif);font-size:clamp(19px,2.1vw,28px);font-weight:300;color:#fff;line-height:1.15}
+.wk-t em{font-style:italic;color:var(--gold-light)}
+.wk-l{font-family:var(--sans);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.82);margin-top:7px}
+@media(max-width:980px){.wk{grid-template-columns:repeat(2,1fr);gap:10px;padding:14px 20px 72px}}
+@media(max-width:600px){.wk{grid-template-columns:1fr}.wk-c.feat{grid-column:span 1;aspect-ratio:3/4}}
 </style>
 </head>
 <body>
@@ -147,127 +158,25 @@ body.es [data-es]{display:inline}
 <div class="nav-tog" aria-label="Menu"><span></span><span></span><span></span></div>
 </nav>
 <header class="ph"><div class="k">Aurea 1618</div><h1><span data-en>Wedding Florals</span><span data-es>Bodas</span></h1><p class="sub"><span data-en>Full floral art direction for destination weddings.</span><span data-es>Dirección de arte floral integral para bodas de destino.</span></p></header>
-<div class="arch"><div class="arch-in">
-    <a class="row" href="galleries/villa-amodei-od.html">
-      <div class="rn">01</div>
-      <div class="rt"><img src="images/g/villa-amodei-od/19.webp" alt="Olivia and David floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">Olivia &amp; <em>David</em></div><div class="rl">Villa Amodei</div></div>
-      <div class="rc">35 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/lm.html">
-      <div class="rn">02</div>
-      <div class="rt"><img src="images/g/lm-floral.webp" alt="L and M floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">L &amp; <em>M</em></div><div class="rl">México</div></div>
-      <div class="rc">7 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/villa-amodei-i.html">
-      <div class="rn">03</div>
-      <div class="rt"><img src="images/g/villa-amodei-1.webp" alt="Villa Amodei floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">Villa <em>Amodei</em></div><div class="rl">Editorial</div></div>
-      <div class="rc">19 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/bere-isaac.html">
-      <div class="rn">04</div>
-      <div class="rt"><img src="images/g/bere-isaac-2.webp" alt="Bere and Isaac floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">Bere &amp; <em>Isaac</em></div><div class="rl">Punta de Mita</div></div>
-      <div class="rc">10 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/fernanda-oscar.html">
-      <div class="rn">05</div>
-      <div class="rt"><img src="images/g/fernanda-oscar-1.webp" alt="Fernanda and Oscar floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">Fernanda &amp; <em>Oscar</em></div><div class="rl">México</div></div>
-      <div class="rc">6 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/se.html">
-      <div class="rn">06</div>
-      <div class="rt"><img src="images/g/se-2.webp" alt="S and E floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">S &amp; <em>E</em></div><div class="rl">Chapala</div></div>
-      <div class="rc">7 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/diana-edgar.html">
-      <div class="rn">07</div>
-      <div class="rt"><img src="images/g/diana-edgar-3.webp" alt="Diana and Edgar floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">Diana &amp; <em>Edgar</em></div><div class="rl">Riviera Nayarit</div></div>
-      <div class="rc">12 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/boho-tulum.html">
-      <div class="rn">08</div>
-      <div class="rt"><img src="images/g/boho-2.webp" alt="Boho Tulum floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">Boho <em>Tulum</em></div><div class="rl">Riviera Maya</div></div>
-      <div class="rc">12 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/ms.html">
-      <div class="rn">09</div>
-      <div class="rt"><img src="images/g/ms-2.webp" alt="M and S floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">M &amp; <em>S</em></div><div class="rl">Guadalajara</div></div>
-      <div class="rc">11 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/hacienda.html">
-      <div class="rn">10</div>
-      <div class="rt"><img src="images/g/hacienda-1.webp" alt="La Hacienda floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">La <em>Hacienda</em></div><div class="rl">México</div></div>
-      <div class="rc">10 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/civil.html">
-      <div class="rn">11</div>
-      <div class="rt"><img src="images/g/civil-1.webp" alt="Lo Civil floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">Lo <em>Civil</em></div><div class="rl">Guadalajara</div></div>
-      <div class="rc">15 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/playa.html">
-      <div class="rn">12</div>
-      <div class="rt"><img src="images/g/playa-1.webp" alt="La Costa floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">La <em>Costa</em></div><div class="rl">México</div></div>
-      <div class="rc">9 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/bosque.html">
-      <div class="rn">13</div>
-      <div class="rt"><img src="images/g/bosque-1.webp" alt="El Bosque floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">El <em>Bosque</em></div><div class="rl">Jalisco</div></div>
-      <div class="rc">12 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/paris-versalles.html">
-      <div class="rn">14</div>
-      <div class="rt"><img src="images/g/paris-1.webp" alt="París and Versalles floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">París &amp; <em>Versalles</em></div><div class="rl">France</div></div>
-      <div class="rc">9 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/dorado.html">
-      <div class="rn">15</div>
-      <div class="rt"><img src="images/g/dorado/01.webp" alt="El Dorado floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">El <em>Dorado</em></div><div class="rl">México</div></div>
-      <div class="rc">5 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/tequila.html">
-      <div class="rn">16</div>
-      <div class="rt"><img src="images/g/tequila-1.webp" alt="El Agave floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">El <em>Agave</em></div><div class="rl">Tequila</div></div>
-      <div class="rc">3 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-    <a class="row" href="galleries/paige-mathew.html">
-      <div class="rn">17</div>
-      <div class="rt"><img src="images/g/paige-mathew/01.webp" alt="Paige and Mathew floral design by Aurea 1618" loading="lazy"></div>
-      <div><div class="rti">Paige &amp; <em>Mathew</em></div><div class="rl">Tulum</div></div>
-      <div class="rc">3 <span data-en>Images</span><span data-es>Imágenes</span></div>
-      <div class="rv"><span data-en>View →</span><span data-es>Ver →</span></div>
-    </a>
-</div></div>
+<div class="wk">
+    <a class="wk-c feat" href="galleries/villa-amodei-od.html"><img src="images/g/amarilla/17.webp" alt="Olivia &amp; David by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">Olivia &amp; <em>David</em></div><div class="wk-l">Villa Amodei · 43 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/lm.html"><img src="images/g/lm-floral.webp" alt="L &amp; M by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">L &amp; <em>M</em></div><div class="wk-l">México · 7 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/villa-amodei-i.html"><img src="images/g/villa-amodei-1.webp" alt="Villa Amodei by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">Villa <em>Amodei</em></div><div class="wk-l">Editorial · 19 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/bere-isaac.html"><img src="images/g/bere-isaac-2.webp" alt="Bere &amp; Isaac by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">Bere &amp; <em>Isaac</em></div><div class="wk-l">Punta de Mita · 10 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/fernanda-oscar.html"><img src="images/g/fernanda-oscar-1.webp" alt="Fernanda &amp; Oscar by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">Fernanda &amp; <em>Oscar</em></div><div class="wk-l">México · 6 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/se.html"><img src="images/g/se-2.webp" alt="S &amp; E by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">S &amp; <em>E</em></div><div class="wk-l">Chapala · 7 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/diana-edgar.html"><img src="images/g/diana-edgar-3.webp" alt="Diana &amp; Edgar by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">Diana &amp; <em>Edgar</em></div><div class="wk-l">Riviera Nayarit · 12 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/boho-tulum.html"><img src="images/g/boho-2.webp" alt="Boho Tulum by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">Boho <em>Tulum</em></div><div class="wk-l">Riviera Maya · 12 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/ms.html"><img src="images/g/ms-2.webp" alt="M &amp; S by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">M &amp; <em>S</em></div><div class="wk-l">Guadalajara · 11 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/hacienda.html"><img src="images/g/hacienda-1.webp" alt="La Hacienda by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">La <em>Hacienda</em></div><div class="wk-l">México · 10 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/civil.html"><img src="images/g/civil-1.webp" alt="Lo Civil by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">Lo <em>Civil</em></div><div class="wk-l">Guadalajara · 15 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/playa.html"><img src="images/g/playa-1.webp" alt="La Costa by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">La <em>Costa</em></div><div class="wk-l">México · 9 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/bosque.html"><img src="images/g/bosque-1.webp" alt="El Bosque by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">El <em>Bosque</em></div><div class="wk-l">Jalisco · 12 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/paris-versalles.html"><img src="images/g/paris-1.webp" alt="París &amp; Versalles by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">París &amp; <em>Versalles</em></div><div class="wk-l">France · 9 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/dorado.html"><img src="images/g/dorado/01.webp" alt="El Dorado by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">El <em>Dorado</em></div><div class="wk-l">México · 5 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/tequila.html"><img src="images/g/tequila-1.webp" alt="El Agave by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">El <em>Agave</em></div><div class="wk-l">Tequila · 3 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+    <a class="wk-c" href="galleries/paige-mathew.html"><img src="images/g/paige-mathew/01.webp" alt="Paige &amp; Mathew by Aurea 1618" loading="lazy"><div class="wk-m"><div class="wk-t">Paige &amp; <em>Mathew</em></div><div class="wk-l">Tulum · 3 <span data-en>frames</span><span data-es>cuadros</span></div></div></a>
+  </div>
 <div class="cta"><a class="btn" href="https://wa.me/523339686925" target="_blank" rel="noopener"><span data-en>Commission your scenography</span><span data-es>Comisiona tu escenografía</span></a></div>
 <footer>
 <img class="f-logo" src="images/logo-mark-light.png" alt="" aria-hidden="true">
