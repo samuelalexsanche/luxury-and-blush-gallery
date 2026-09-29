@@ -168,7 +168,10 @@ body.es [data-es]{display:inline}
 <div class="nav-tog" aria-label="Menu"><span></span><span></span><span></span></div>
 </nav>
 <section class="hero">
-  <img src="images/hero-amarilla.webp" alt="Citrus banquet at golden hour designed by Aurea 1618" fetchpriority="high">
+  <picture>
+    <source media="(max-width:760px)" srcset="images/hero-amarilla-m.webp" width="900" height="1200">
+    <img src="images/hero-amarilla.webp" alt="Citrus banquet at golden hour designed by Aurea 1618" width="1800" height="1200" fetchpriority="high">
+  </picture>
 </section>
 <section class="statement">
   <img class="st-logo" src="images/logo-mark-light.png" alt="" aria-hidden="true">
