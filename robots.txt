@@ -1,4 +1,4 @@
-# robots.txt — Luxury and Blush Events
+# robots.txt — Áurea 1618 · Florals & Decor
 # All crawlers welcome, including AI/LLM crawlers (GEO)
 
 User-agent: *
@@ -41,4 +41,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://luxuryandblushgallery.com/sitemap.xml
+Sitemap: https://aurea1618floral.com/sitemap.xml
